@@ -139,51 +139,107 @@
   .project-link:hover { text-decoration: underline; }
   .project-link svg { width: 13px; height: 13px; }
 
-  /* ACADEMY */
-  #academy { background: #050F1F; }
-  #academy .section-label { color: #34D399; }
-  #academy .section-label::after { background: #34D399; }
-  #academy .section-title { color: #F1F5F9; }
+  /* ============================================================
+     SRINIMART ARCHITECTURE SECTION
+  ============================================================ */
+  #srinimart { background: #050F1F; }
+  #srinimart .section-label { color: #34D399; }
+  #srinimart .section-label::after { background: #34D399; }
+  #srinimart .section-title { color: #F1F5F9; }
 
-  .academy-intro {
-    background: rgba(52,211,153,0.06); border: 1px solid rgba(52,211,153,0.2);
+  /* Intro banner */
+  .sm-intro {
+    background: rgba(52,211,153,0.06);
+    border: 1px solid rgba(52,211,153,0.2);
     border-radius: 14px; padding: 2rem 2.5rem; margin-bottom: 3rem;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 2rem; flex-wrap: wrap;
   }
-  .academy-intro h3 { font-family: 'DM Serif Display', serif; font-size: 1.5rem; color: #F1F5F9; margin-bottom: 0.75rem; }
-  .academy-intro p { font-size: 0.9rem; color: rgba(255,255,255,0.55); line-height: 1.75; }
+  .sm-intro-text h3 { font-family: 'DM Serif Display', serif; font-size: 1.45rem; color: #F1F5F9; margin-bottom: 0.5rem; }
+  .sm-intro-text p { font-size: 0.88rem; color: rgba(255,255,255,0.5); max-width: 580px; line-height: 1.7; }
+  .sm-github-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: #34D399; color: #052e16; font-weight: 700;
+    font-size: 0.83rem; padding: 0.7rem 1.4rem; border-radius: 6px;
+    text-decoration: none; white-space: nowrap; transition: background 0.2s; flex-shrink: 0;
+  }
+  .sm-github-btn:hover { background: #10b981; }
 
-  .academy-stats-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; margin-bottom: 3rem; }
-  .academy-stat { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 10px; padding: 1.25rem; text-align: center; }
-  .academy-stat .num { font-family: 'DM Serif Display', serif; font-size: 2rem; color: #34D399; display: block; }
-  .academy-stat .lbl { font-size: 0.75rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.07em; margin-top: 0.2rem; }
+  /* Results row */
+  .sm-results-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-bottom: 3rem; }
+  .sm-result-card {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px; padding: 1.5rem; text-align: center;
+  }
+  .sm-result-card .rnum { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: #34D399; display: block; line-height: 1; }
+  .sm-result-card .rdesc { font-size: 0.8rem; color: rgba(255,255,255,0.45); margin-top: 0.4rem; line-height: 1.4; }
 
-  .modules-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
-  .modules-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
-  .module-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 1.25rem 1.5rem; transition: border-color 0.2s, background 0.2s; }
-  .module-card:hover { border-color: rgba(52,211,153,0.35); background: rgba(52,211,153,0.04); }
-  .module-card-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.6rem; }
-  .module-num { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: #34D399; letter-spacing: 0.08em; }
-  .module-tags-row { display: flex; gap: 0.35rem; flex-wrap: wrap; }
-  .module-micro-tag { font-size: 0.65rem; background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2); color: #6EE7B7; padding: 0.15rem 0.5rem; border-radius: 100px; }
-  .module-card h4 { font-size: 0.92rem; font-weight: 600; color: #F1F5F9; margin-bottom: 0.4rem; }
-  .module-card p { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.55; }
+  /* Architecture diagram */
+  .arch-heading {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .arch-layers { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 3rem; }
+  .arch-layer {
+    border-radius: 10px; padding: 1.25rem 1.5rem;
+    display: grid; grid-template-columns: 3.5rem 1fr auto;
+    align-items: center; gap: 1.25rem;
+    border: 1px solid rgba(255,255,255,0.08);
+    background: rgba(255,255,255,0.03);
+    transition: border-color 0.2s;
+  }
+  .arch-layer:hover { border-color: rgba(52,211,153,0.3); }
+  .layer-badge {
+    width: 44px; height: 44px; border-radius: 10px;
+    display: flex; align-items: center; justify-content: center;
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    font-weight: 600; flex-shrink: 0;
+  }
+  .layer-badge.l1 { background: rgba(37,99,235,0.2);  color: #93C5FD; border: 1px solid rgba(37,99,235,0.3); }
+  .layer-badge.l2 { background: rgba(52,211,153,0.2); color: #6EE7B7; border: 1px solid rgba(52,211,153,0.3); }
+  .layer-badge.l3 { background: rgba(217,119,6,0.2);  color: #FCD34D; border: 1px solid rgba(217,119,6,0.3); }
+  .layer-badge.l4 { background: rgba(239,68,68,0.2);  color: #FCA5A5; border: 1px solid rgba(239,68,68,0.3); }
+  .layer-badge.l5 { background: rgba(139,92,246,0.2); color: #C4B5FD; border: 1px solid rgba(139,92,246,0.3); }
+  .layer-info h4 { font-size: 0.93rem; font-weight: 600; color: #F1F5F9; margin-bottom: 0.25rem; }
+  .layer-info p { font-size: 0.8rem; color: rgba(255,255,255,0.45); line-height: 1.5; }
+  .layer-tags { display: flex; flex-wrap: wrap; gap: 0.35rem; justify-content: flex-end; }
+  .layer-tag {
+    font-size: 0.68rem; padding: 0.2rem 0.55rem; border-radius: 100px;
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1);
+    color: rgba(255,255,255,0.5);
+  }
 
-  .lessons-heading { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 1.25rem; }
-  .lessons-list { display: flex; flex-direction: column; gap: 1.25rem; }
-  .lesson-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07); border-radius: 12px; padding: 1.5rem; display: grid; grid-template-columns: 3rem 1fr; gap: 1.25rem; align-items: start; }
-  .lesson-num-badge { width: 44px; height: 44px; border-radius: 10px; background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2); display: flex; align-items: center; justify-content: center; font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: #34D399; flex-shrink: 0; }
-  .lesson-body h4 { font-size: 0.93rem; font-weight: 600; color: #F1F5F9; margin-bottom: 0.35rem; }
-  .lesson-body p { font-size: 0.82rem; color: rgba(255,255,255,0.45); line-height: 1.6; margin-bottom: 0.75rem; }
-  .lesson-kv { display: flex; flex-wrap: wrap; gap: 0.4rem; }
-  .lesson-kv span { font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 100px; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); color: rgba(255,255,255,0.5); }
+  /* Tool patterns table */
+  .patterns-heading {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .patterns-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+  .pattern-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 12px; padding: 1.25rem;
+  }
+  .pattern-card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.6rem; }
+  .pattern-name { font-size: 0.88rem; font-weight: 600; color: #F1F5F9; }
+  .pattern-result { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: #34D399; background: rgba(52,211,153,0.1); border: 1px solid rgba(52,211,153,0.2); padding: 0.2rem 0.55rem; border-radius: 100px; white-space: nowrap; }
+  .pattern-desc { font-size: 0.8rem; color: rgba(255,255,255,0.4); line-height: 1.55; }
 
-  .srinimart-bar { margin-top: 3rem; background: rgba(37,99,235,0.08); border: 1px solid rgba(37,99,235,0.2); border-radius: 12px; padding: 1.75rem 2rem; }
-  .srinimart-bar h4 { font-size: 1rem; font-weight: 700; color: #93C5FD; margin-bottom: 0.5rem; }
-  .srinimart-bar p { font-size: 0.85rem; color: rgba(255,255,255,0.5); line-height: 1.7; margin-bottom: 1rem; }
-  .srinimart-results { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-  .srinimart-result { text-align: center; }
-  .srinimart-result .rnum { font-family: 'DM Serif Display', serif; font-size: 1.7rem; color: #60A5FA; display: block; }
-  .srinimart-result .rlbl { font-size: 0.72rem; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.07em; }
+  /* Framework stack */
+  .framework-heading {
+    font-family: 'JetBrains Mono', monospace; font-size: 0.72rem;
+    color: rgba(255,255,255,0.35); letter-spacing: 0.1em; text-transform: uppercase;
+    margin-bottom: 1.25rem;
+  }
+  .framework-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 3rem; }
+  .framework-card {
+    background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 10px; padding: 1.1rem 1.25rem;
+  }
+  .fw-layer { font-family: 'JetBrains Mono', monospace; font-size: 0.68rem; color: rgba(255,255,255,0.3); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.3rem; }
+  .fw-name { font-size: 0.9rem; font-weight: 700; color: #93C5FD; margin-bottom: 0.3rem; }
+  .fw-reason { font-size: 0.78rem; color: rgba(255,255,255,0.4); line-height: 1.5; }
 
   /* AWARDS */
   #awards { background: var(--off-white); }
@@ -199,8 +255,9 @@
   @media (max-width: 768px) {
     .about-grid { grid-template-columns: 1fr; }
     .hero-stats { position: static; margin-top: 3rem; justify-content: flex-start; }
-    .academy-stats-row { grid-template-columns: repeat(2,1fr); }
-    .srinimart-results { grid-template-columns: 1fr; }
+    .sm-results-row { grid-template-columns: 1fr; }
+    .arch-layer { grid-template-columns: 3.5rem 1fr; }
+    .layer-tags { display: none; }
     nav ul { display: none; }
   }
 </style>
@@ -214,7 +271,7 @@
     <li><a href="#skills">Skills</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#projects">Projects</a></li>
-    <li><a href="#academy">Academy</a></li>
+    <li><a href="#srinimart">SriniMart</a></li>
     <li><a href="#awards">Awards</a></li>
   </ul>
 </nav>
@@ -237,11 +294,12 @@
   <div class="hero-cta">
     <a href="mailto:psrinvas570000@gmail.com" class="btn-primary">Get In Touch</a>
     <a href="https://www.linkedin.com/in/sayantan-bhattacharya" target="_blank" class="btn-outline">LinkedIn Profile</a>
+    <a href="https://github.com/srinivasapesala/srinimart-data-agent" target="_blank" class="btn-outline">GitHub ↗</a>
   </div>
   <div class="hero-stats">
     <div class="stat"><span class="stat-num">14+</span><span class="stat-label">Years Experience</span></div>
-    <div class="stat"><span class="stat-num">10</span><span class="stat-label">Academy Modules</span></div>
     <div class="stat"><span class="stat-num">6</span><span class="stat-label">Certifications</span></div>
+    <div class="stat"><span class="stat-num">8+</span><span class="stat-label">Awards</span></div>
   </div>
 </section>
 
@@ -252,7 +310,7 @@
   <div class="about-grid">
     <div class="about-text">
       <p>I'm a <strong>GenAI &amp; Data Engineering Lead</strong> with 14+ years of experience building enterprise-scale AI/ML and data platforms on Microsoft Azure. I specialize in <strong>LLM integration, RAG architectures, Data Agent design, and agentic AI systems</strong> layered on cloud-native data foundations.</p>
-      <p>At NTT DATA, I lead the design and delivery of production GenAI solutions — intelligent document pipelines, conversational AI, real-time multimodal streaming, and advanced Data Agent architectures. I've also authored the <strong>Data Agent Academy</strong>, a 10-module hands-on curriculum covering production-grade agent design from five-layer architecture to MCP interoperability, cost optimization, and semantic layer design.</p>
+      <p>At NTT DATA, I lead the design and delivery of production GenAI solutions — intelligent document pipelines, conversational AI, real-time multimodal streaming, and advanced Data Agent architectures including the <strong>SriniMart self-service analytics platform</strong> — a five-layer Data Agent serving 300 retail stores.</p>
       <p>Previously at Infosys, I built scalable data warehouses, Snowflake analytics platforms, and ETL pipelines that power ML feature stores for enterprise clients. I bring the <strong>strategic depth of an architect</strong> and the execution focus of a hands-on builder.</p>
       <div class="about-contact">
         <div class="contact-row">
@@ -270,6 +328,10 @@
         <div class="contact-row">
           <div class="contact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
           <a href="https://www.linkedin.com/in/sayantan-bhattacharya" target="_blank">linkedin.com/in/srinivasa-pesala</a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#2563EB" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+          <a href="https://github.com/srinivasapesala" target="_blank">github.com/srinivasapesala</a>
         </div>
       </div>
     </div>
@@ -305,7 +367,6 @@
   <div class="section-label">Career Journey</div>
   <h2 class="section-title">Work Experience</h2>
   <div class="timeline">
-
     <div class="timeline-item">
       <div class="timeline-dot"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="6"/></svg></div>
       <div class="timeline-body">
@@ -314,22 +375,19 @@
         <ul>
           <li>Architected enterprise <strong>GenAI solutions on Azure OpenAI</strong>, integrating LLM-powered entity recognition and intelligent document pipelines — improved extraction accuracy by ~35%.</li>
           <li>Built production <strong>RAG pipelines</strong> with Azure Cognitive Search and FAISS using hybrid dense retrieval and reranking for citation-grounded, context-aware AI responses at scale.</li>
-          <li>Designed and deployed a <strong>five-layer Data Agent architecture</strong> (Runtime, Tool Layer, RAG Context, Guardrails, Evaluation) enabling self-service analytics over enterprise data warehouses.</li>
-          <li>Applied <strong>advanced agent tool-use patterns</strong> including dynamic tool discovery, programmatic batch tool calling, and few-shot tool examples — improving selection accuracy and reducing operational costs significantly.</li>
+          <li>Designed and deployed the <strong>SriniMart five-layer Data Agent</strong> enabling self-service analytics across 300 stores — 70% query cost reduction, 60% response time improvement.</li>
           <li>Implemented <strong>conversational memory and personalization layers</strong> using vector similarity ranking and behavioral signals, increasing AI task completion rates by ~30%.</li>
           <li>Engineered real-time <strong>multimodal AI pipelines</strong> (speech-to-text → LLM → text-to-speech) for live voice-driven AI interactions over streaming data.</li>
           <li>Automated <strong>GenAI MLOps workflows</strong> using Databricks, Docker, and GitHub Actions with CI/CD, model versioning, and evaluation pipelines.</li>
           <li>Integrated <strong>AI safety controls</strong>: hallucination detection, PII masking, prompt-injection mitigation, and output verification for production-grade trust.</li>
-          <li>Reduced incident resolution time by ~40% with observability via Azure Monitor, Prometheus, and Grafana across all LLM services.</li>
         </ul>
         <div class="impact-badges">
           <span class="impact-badge blue">~35% extraction accuracy</span>
           <span class="impact-badge teal">~30% task completion</span>
-          <span class="impact-badge gold">~40% faster resolution</span>
+          <span class="impact-badge gold">70% query cost reduction</span>
         </div>
       </div>
     </div>
-
     <div class="timeline-item">
       <div class="timeline-dot"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="6"/></svg></div>
       <div class="timeline-body">
@@ -343,7 +401,6 @@
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
       <div class="timeline-dot teal"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="6"/></svg></div>
       <div class="timeline-body">
@@ -355,7 +412,6 @@
         </ul>
       </div>
     </div>
-
     <div class="timeline-item">
       <div class="timeline-dot teal"><svg width="12" height="12" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="6"/></svg></div>
       <div class="timeline-body">
@@ -368,7 +424,6 @@
         </ul>
       </div>
     </div>
-
   </div>
 </section>
 
@@ -377,218 +432,235 @@
   <div class="section-label">What I've Built</div>
   <h2 class="section-title">Key Projects</h2>
   <div class="projects-grid">
-
     <div class="project-card">
       <div class="project-card-top blue"></div>
       <div class="project-card-body">
         <h3>Enterprise GenAI Document Intelligence Platform</h3>
         <p>Production RAG system on Azure OpenAI with hallucination detection, PII masking, and citation-grounded AI responses for compliance-sensitive enterprise workflows.</p>
         <div class="project-tags"><span class="project-tag">Azure OpenAI</span><span class="project-tag">RAG</span><span class="project-tag">FAISS</span><span class="project-tag">FastAPI</span><span class="project-tag">Python</span></div>
-        <a href="#" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a href="https://github.com/srinivasapesala" class="project-link" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-card-top teal"></div>
       <div class="project-card-body">
-        <h3>Self-Service Data Agent — SriniMart Retail Platform</h3>
-        <p>Deployed a production Data Agent enabling non-technical stakeholders to query a 300-store retail warehouse in plain English. Five-layer architecture with multi-agent orchestration across 50+ data sources — reduced query cost 70%, response time 60%.</p>
-        <div class="project-tags"><span class="project-tag">LangGraph</span><span class="project-tag">CrewAI</span><span class="project-tag">MCP</span><span class="project-tag">Azure SQL</span><span class="project-tag">Python</span></div>
-        <a href="#" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <h3>SriniMart Self-Service Data Agent</h3>
+        <p>Five-layer production Data Agent enabling 300-store retail stakeholders to query the warehouse in plain English. LangGraph orchestration, CrewAI multi-agent team, MCP tool integration across 50+ data sources.</p>
+        <div class="project-tags"><span class="project-tag">LangGraph</span><span class="project-tag">CrewAI</span><span class="project-tag">MCP</span><span class="project-tag">Azure OpenAI</span><span class="project-tag">Python</span></div>
+        <a href="https://github.com/srinivasapesala/srinimart-data-agent" class="project-link" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-card-top gold"></div>
       <div class="project-card-body">
         <h3>Real-Time AI Streaming Analytics Pipeline</h3>
         <p>Event-driven AI pipeline with Kafka and Spark Structured Streaming feeding live data into LLM-powered summarization and anomaly detection at sub-second latency.</p>
         <div class="project-tags"><span class="project-tag">Kafka</span><span class="project-tag">Spark Streaming</span><span class="project-tag">LangChain</span><span class="project-tag">Azure Event Hub</span></div>
-        <a href="#" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a href="https://github.com/srinivasapesala" class="project-link" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-card-top navy"></div>
       <div class="project-card-body">
         <h3>Healthcare AI Lakehouse — HIPAA-Compliant ML Platform</h3>
-        <p>Delta Lakehouse on Azure Databricks with Unity Catalog governance for HIPAA-compliant ML model training pipelines supporting clinical prediction and patient outcome analytics.</p>
+        <p>Delta Lakehouse on Azure Databricks with Unity Catalog governance for HIPAA-compliant ML model training pipelines supporting clinical prediction analytics.</p>
         <div class="project-tags"><span class="project-tag">Azure Databricks</span><span class="project-tag">Delta Lake</span><span class="project-tag">Unity Catalog</span><span class="project-tag">PySpark</span></div>
-        <a href="#" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a href="https://github.com/srinivasapesala" class="project-link" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-card-top blue"></div>
       <div class="project-card-body">
         <h3>MLOps Platform — Automated LLM Deployment</h3>
-        <p>Full GenAI model deployment lifecycle using Databricks, Docker, and GitHub Actions CI/CD with model drift detection, versioning, and prompt-safety monitoring via Grafana and Prometheus.</p>
+        <p>Full GenAI model deployment lifecycle using Databricks, Docker, and GitHub Actions CI/CD with model drift detection, versioning, and prompt-safety monitoring.</p>
         <div class="project-tags"><span class="project-tag">Databricks</span><span class="project-tag">Docker</span><span class="project-tag">GitHub Actions</span><span class="project-tag">Prometheus</span></div>
-        <a href="#" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a href="https://github.com/srinivasapesala" class="project-link" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
-
     <div class="project-card">
       <div class="project-card-top teal"></div>
       <div class="project-card-body">
         <h3>Multimodal Conversational AI Pipeline</h3>
         <p>Voice-driven AI pipeline integrating Azure Speech Services, GPT-4 reasoning, and text-to-speech synthesis for coherent live conversational AI over streaming enterprise data.</p>
         <div class="project-tags"><span class="project-tag">Azure Speech</span><span class="project-tag">GPT-4</span><span class="project-tag">LangChain</span><span class="project-tag">Python</span></div>
-        <a href="#" class="project-link">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
+        <a href="https://github.com/srinivasapesala" class="project-link" target="_blank">View on GitHub <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
       </div>
     </div>
-
   </div>
 </section>
 
-<!-- DATA AGENT ACADEMY -->
-<section id="academy">
-  <div class="section-label">Thought Leadership</div>
-  <h2 class="section-title">Data Agent Academy</h2>
+<!-- SRINIMART ARCHITECTURE -->
+<section id="srinimart">
+  <div class="section-label">Featured Project</div>
+  <h2 class="section-title">SriniMart Data Agent — Architecture</h2>
 
-  <div class="academy-intro">
-    <h3>Data Agent Architecture &amp; Design Foundations</h3>
-    <p>A 10-module, hands-on curriculum I designed for building production-grade Data Agents — grounded in a real-world retail case study (SriniMart: 300-store self-service analytics platform). The curriculum covers the full agent lifecycle: from five-layer architecture and composable tool design through MCP interoperability, security, cost optimization, reasoning pattern selection, and semantic layer governance. Built for data engineers and AI architects who want to go beyond demos and ship agents that hold up in production.</p>
+  <!-- Intro -->
+  <div class="sm-intro">
+    <div class="sm-intro-text">
+      <h3>Self-Service Analytics for 300-Store Retail</h3>
+      <p>SriniMart's data team was spending 70% of their time writing SQL for business stakeholders. This five-layer Data Agent lets any store manager, regional director, or product owner ask questions in plain English and get governed, accurate answers from the warehouse — no SQL required.</p>
+    </div>
+    <a href="https://github.com/srinivasapesala/srinimart-data-agent" target="_blank" class="sm-github-btn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+      View on GitHub
+    </a>
   </div>
 
-  <div class="academy-stats-row">
-    <div class="academy-stat"><span class="num">10</span><span class="lbl">Modules</span></div>
-    <div class="academy-stat"><span class="num">40+</span><span class="lbl">Lessons</span></div>
-    <div class="academy-stat"><span class="num">11</span><span class="lbl">Simulations</span></div>
-    <div class="academy-stat"><span class="num">1</span><span class="lbl">Live Case Study</span></div>
-  </div>
-
-  <div class="modules-heading">Full Curriculum — 10 Modules</div>
-  <div class="modules-grid">
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 01</span><div class="module-tags-row"><span class="module-micro-tag">Five Layers</span><span class="module-micro-tag">Tool Design</span></div></div>
-      <h4>Architecture Foundation</h4>
-      <p>Five-layer agent architecture, composable tool definitions, error handling strategies, and the protocol bridging LLM reasoning to real execution.</p>
+  <!-- Results -->
+  <div class="sm-results-row">
+    <div class="sm-result-card">
+      <span class="rnum">70%</span>
+      <div class="rdesc">Query cost reduction via programmatic batch tool calling &amp; MCP on-demand loading</div>
     </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 02</span><div class="module-tags-row"><span class="module-micro-tag">LLM Core</span><span class="module-micro-tag">ReAct Loop</span></div></div>
-      <h4>Agent Anatomy</h4>
-      <p>Inside the agent: LLM core, reasoning graphs, memory systems, role taxonomy, and LangGraph orchestration patterns.</p>
+    <div class="sm-result-card">
+      <span class="rnum">60%</span>
+      <div class="rdesc">Response time improvement through intelligent reasoning pattern routing</div>
     </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 03</span><div class="module-tags-row"><span class="module-micro-tag">Personas</span><span class="module-micro-tag">RBAC</span></div></div>
-      <h4>Persona Design</h4>
-      <p>Data-supply-chain personas, role-based guardrails, and graduated autonomy patterns for enterprise-grade agents.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 04</span><div class="module-tags-row"><span class="module-micro-tag">Multi-Agent</span><span class="module-micro-tag">A2A</span></div></div>
-      <h4>Autonomy &amp; Collaboration</h4>
-      <p>Goal decomposition, multi-agent coordination patterns, memory systems, and failure handling at scale.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 05</span><div class="module-tags-row"><span class="module-micro-tag">Eval Gates</span><span class="module-micro-tag">CI/CD</span></div></div>
-      <h4>AgentOps: CI/CD &amp; Eval Gates</h4>
-      <p>Deployment patterns, evaluation gates, versioning strategies, and the CI/CD pipeline for autonomous agents.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 06</span><div class="module-tags-row"><span class="module-micro-tag">RAG Pipeline</span><span class="module-micro-tag">Vector DBs</span></div></div>
-      <h4>Context Engineering &amp; RAG</h4>
-      <p>Context window management, RAG architecture, chunking strategies, retrieval optimization, and agentic RAG patterns.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 07</span><div class="module-tags-row"><span class="module-micro-tag">MCP</span><span class="module-micro-tag">A2A</span></div></div>
-      <h4>Interoperability Protocols</h4>
-      <p>MCP for standardized agent-to-tool connectivity, A2A for cross-agent collaboration, and the AAIF governance framework.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 08</span><div class="module-tags-row"><span class="module-micro-tag">Zero Trust</span><span class="module-micro-tag">PII Masking</span></div></div>
-      <h4>Security, Privacy &amp; Compliance</h4>
-      <p>Zero Trust architecture, threat models, PII masking, regulatory compliance, and production security implementation.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 09</span><div class="module-tags-row"><span class="module-micro-tag">Cost</span><span class="module-micro-tag">Caching</span></div></div>
-      <h4>Cost Optimization &amp; Economics</h4>
-      <p>Token budget strategies, model routing, semantic caching, and financial guardrails for production LLM workloads.</p>
-    </div>
-    <div class="module-card">
-      <div class="module-card-top"><span class="module-num">Module 10</span><div class="module-tags-row"><span class="module-micro-tag">Semantic Layer</span><span class="module-micro-tag">Agent UX</span></div></div>
-      <h4>Semantic Layer &amp; Agent UX</h4>
-      <p>Semantic data modeling, conversation design for non-technical users, data quality, and agent governance patterns.</p>
+    <div class="sm-result-card">
+      <span class="rnum">97%</span>
+      <div class="rdesc">SQL accuracy rate — up from 75% — via schema RAG &amp; few-shot tool examples</div>
     </div>
   </div>
 
-  <div class="lessons-heading">Module 01 — Key Topics</div>
-  <div class="lessons-list">
+  <!-- Five-Layer Architecture -->
+  <div class="arch-heading">Five-Layer Architecture</div>
+  <div class="arch-layers">
 
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L01</div>
-      <div class="lesson-body">
-        <h4>The Five-Layer Architecture</h4>
-        <p>Why a chatbot wrapper isn't enough — and the layered blueprint that makes a Data Agent production-ready. Covers each layer's role, how they compose, and real retail scenarios for each failure mode.</p>
-        <div class="lesson-kv"><span>Agent Runtime</span><span>Tool Layer</span><span>RAG Context</span><span>RBAC Guardrails</span><span>Evaluation</span></div>
+    <div class="arch-layer">
+      <div class="layer-badge l1">L1</div>
+      <div class="layer-info">
+        <h4>Agent Runtime</h4>
+        <p>LangGraph state graph orchestrates the full query lifecycle — receives natural language, routes to the right reasoning pattern, maintains conversation state across turns, and coordinates all five layers to produce a governed answer.</p>
+      </div>
+      <div class="layer-tags">
+        <span class="layer-tag">LangGraph</span>
+        <span class="layer-tag">State Graph</span>
+        <span class="layer-tag">Conversation Memory</span>
+        <span class="layer-tag">Reasoning Router</span>
       </div>
     </div>
 
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L02</div>
-      <div class="lesson-body">
-        <h4>Tool Definitions — Composable Agent Hands</h4>
-        <p>Designing well-scoped, composable tools using a strict JSON contract. Covers five tool categories and the core design principle: narrow tools beat monolithic ones every time.</p>
-        <div class="lesson-kv"><span>JSON Schema Contract</span><span>Five Tool Categories</span><span>Composable Design</span><span>Tool Sequencing</span></div>
+    <div class="arch-layer">
+      <div class="layer-badge l2">L2</div>
+      <div class="layer-info">
+        <h4>Tool Layer</h4>
+        <p>50+ SriniMart data sources wrapped as MCP servers, loaded on-demand (500-token startup cost vs. 15,000 upfront). Tool Search meta-tool dynamically discovers the right 3–5 tools per query. Programmatic batch calling handles multi-store operations in a single code block rather than 300 LLM round-trips.</p>
+      </div>
+      <div class="layer-tags">
+        <span class="layer-tag">MCP Protocol</span>
+        <span class="layer-tag">Tool Search</span>
+        <span class="layer-tag">Batch Calling</span>
+        <span class="layer-tag">Few-Shot Examples</span>
       </div>
     </div>
 
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L03</div>
-      <div class="lesson-body">
-        <h4>Error Handling Strategies</h4>
-        <p>A production agent handles five failure classes gracefully — not just the happy path. Covers transient errors, validation failures, permission denials, missing resources, and long-running timeouts, including the Circuit Breaker pattern.</p>
-        <div class="lesson-kv"><span>Exponential Backoff</span><span>Circuit Breaker</span><span>Partial Results</span><span>Permission Guidance</span></div>
+    <div class="arch-layer">
+      <div class="layer-badge l3">L3</div>
+      <div class="layer-info">
+        <h4>Data &amp; Context (RAG)</h4>
+        <p>Hybrid dense + keyword retrieval over SriniMart's schema catalog and business glossary. Maps plain-English terms to exact column names — "revenue" → <code style="color:#34D399;font-size:0.78rem;">sales.total_amount</code>, "Q3" → July–September — so the agent uses real columns instead of hallucinating plausible-sounding ones.</p>
+      </div>
+      <div class="layer-tags">
+        <span class="layer-tag">FAISS</span>
+        <span class="layer-tag">Azure Cognitive Search</span>
+        <span class="layer-tag">Business Glossary</span>
+        <span class="layer-tag">Schema Embeddings</span>
       </div>
     </div>
 
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L04</div>
-      <div class="lesson-body">
-        <h4>Tool Calling — From Intent to Execution</h4>
-        <p>The protocol bridging LLM reasoning to real-world action: the LLM emits a structured JSON function call, the runtime executes it, results feed back to the model. Full multi-step trace with permission scoping included.</p>
-        <div class="lesson-kv"><span>Function Call Protocol</span><span>Multi-Iteration Trace</span><span>Result Synthesis</span><span>Permission Scoping</span></div>
+    <div class="arch-layer">
+      <div class="layer-badge l4">L4</div>
+      <div class="layer-info">
+        <h4>Guardrails</h4>
+        <p>Dual-check access control: pre-query WHERE clause injection scopes SQL to the user's permitted stores/region; post-query answer validation is the safety net. PII masking runs on every answer before it surfaces. Per-role rate limiting enforces query budgets. Store managers see only their store. Regional managers see only their region.</p>
+      </div>
+      <div class="layer-tags">
+        <span class="layer-tag">RBAC</span>
+        <span class="layer-tag">PII Masking</span>
+        <span class="layer-tag">Rate Limiting</span>
+        <span class="layer-tag">Scope Injection</span>
       </div>
     </div>
 
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L05</div>
-      <div class="lesson-body">
-        <h4>Framework Landscape &amp; Comparison</h4>
-        <p>Six production agent frameworks compared across multi-agent support, stateful workflows, cloud portability, and production tooling. No single framework wins on all dimensions — the right answer is a layered stack.</p>
-        <div class="lesson-kv"><span>LangGraph</span><span>CrewAI</span><span>AutoGen</span><span>Claude SDK</span><span>Google ADK</span><span>MCP</span></div>
+    <div class="arch-layer">
+      <div class="layer-badge l5">L5</div>
+      <div class="layer-info">
+        <h4>Evaluation</h4>
+        <p>Every query is recorded with latency, token cost, reasoning pattern used, and PII-leak flag. Per-pattern cost analytics reveal if queries are being misrouted to expensive patterns. Targets: latency P95 &lt; 5s, average cost &lt; $0.05/query, error rate &lt; 5%, PII leakage 0%.</p>
       </div>
-    </div>
-
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L06</div>
-      <div class="lesson-body">
-        <h4>Alternative Reasoning Patterns</h4>
-        <p>ReAct is the default, but four patterns serve different problem types. Covers when to apply Plan-and-Execute, Tree-of-Thought, and Reflexion — and how a complexity router picks the right one per query automatically.</p>
-        <div class="lesson-kv"><span>ReAct</span><span>Plan-and-Execute</span><span>Tree-of-Thought</span><span>Reflexion</span><span>Complexity Router</span></div>
-      </div>
-    </div>
-
-    <div class="lesson-card">
-      <div class="lesson-num-badge">L07</div>
-      <div class="lesson-body">
-        <h4>Advanced Tool Use Patterns</h4>
-        <p>Six scaling patterns beyond basic function calling: dynamic tool discovery, programmatic batch calling, few-shot tool examples, reusable agent skills, on-demand MCP loading, and token-efficient tool design — each validated against production SriniMart workloads.</p>
-        <div class="lesson-kv"><span>Dynamic Discovery</span><span>Batch Tool Calling</span><span>Few-Shot Examples</span><span>MCP On-Demand</span><span>Token Budget</span></div>
+      <div class="layer-tags">
+        <span class="layer-tag">Latency P95</span>
+        <span class="layer-tag">Token Cost</span>
+        <span class="layer-tag">LangSmith</span>
+        <span class="layer-tag">Prometheus</span>
       </div>
     </div>
 
   </div>
 
-  <div class="srinimart-bar">
-    <h4>SriniMart — Production Data Agent Results</h4>
-    <p>A 300-store retail analytics platform where analysts were spending the majority of their time writing SQL for stakeholders. After deploying the Data Agent architecture with advanced tool-use patterns across 50+ data sources, the platform achieved measurable improvements across cost, speed, and reliability.</p>
-    <div class="srinimart-results">
-      <div class="srinimart-result"><span class="rnum">70%</span><span class="rlbl">Query Cost Reduction</span></div>
-      <div class="srinimart-result"><span class="rnum">60%</span><span class="rlbl">Response Time Cut</span></div>
-      <div class="srinimart-result"><span class="rnum">97%</span><span class="rlbl">SQL Accuracy Rate</span></div>
+  <!-- Reasoning Patterns -->
+  <div class="patterns-heading">Reasoning Pattern Routing</div>
+  <div class="patterns-grid">
+    <div class="pattern-card">
+      <div class="pattern-card-top">
+        <span class="pattern-name">ReAct</span>
+        <span class="pattern-result">~80% of queries</span>
+      </div>
+      <p class="pattern-desc">Think → Act → Observe loop for simple data lookups and single-metric questions. Low cost, low latency — the default for most stakeholder queries.</p>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-card-top">
+        <span class="pattern-name">Plan-and-Execute</span>
+        <span class="pattern-result">Multi-step reports</span>
+      </div>
+      <p class="pattern-desc">Planner creates a full step-by-step plan; Analyst executes each step sequentially. Used for quarterly reviews and cross-region comparisons where upfront coordination pays off.</p>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-card-top">
+        <span class="pattern-name">Reflexion</span>
+        <span class="pattern-result">Root-cause queries</span>
+      </div>
+      <p class="pattern-desc">Execute → Reflect on what failed → Retry with insight. Converts each dead end into a better-targeted next hypothesis. Used for "why did Southwest revenue drop?" investigations.</p>
+    </div>
+    <div class="pattern-card">
+      <div class="pattern-card-top">
+        <span class="pattern-name">Tree-of-Thought</span>
+        <span class="pattern-result">Strategic decisions</span>
+      </div>
+      <p class="pattern-desc">Generates three parallel reasoning branches, evaluates each, pursues the best. Reserved for high-value strategic questions where quality justifies the 3–5x cost multiplier.</p>
     </div>
   </div>
+
+  <!-- Framework Stack -->
+  <div class="framework-heading">Framework Stack</div>
+  <div class="framework-grid">
+    <div class="framework-card">
+      <div class="fw-layer">Orchestration</div>
+      <div class="fw-name">LangGraph</div>
+      <div class="fw-reason">Stateful graph workflows, retry loops, conditional branching, LangSmith tracing</div>
+    </div>
+    <div class="framework-card">
+      <div class="fw-layer">Agent Team</div>
+      <div class="fw-name">CrewAI</div>
+      <div class="fw-reason">Role-based Planner / Analyst / Validator / Writer — explicit responsibilities, fast velocity</div>
+    </div>
+    <div class="framework-card">
+      <div class="fw-layer">Tool Protocol</div>
+      <div class="fw-name">MCP</div>
+      <div class="fw-reason">Standardized interface across all 50+ data sources — no vendor lock-in at the tool layer</div>
+    </div>
+    <div class="framework-card">
+      <div class="fw-layer">LLM</div>
+      <div class="fw-name">Azure OpenAI</div>
+      <div class="fw-reason">GPT-4o for Analyst &amp; Writer; GPT-4o-mini for Planner to keep planning cost low</div>
+    </div>
+    <div class="framework-card">
+      <div class="fw-layer">Vector Store</div>
+      <div class="fw-name">FAISS + Azure Search</div>
+      <div class="fw-reason">Dense embeddings (FAISS) + keyword matching (Azure Cognitive Search) for hybrid retrieval</div>
+    </div>
+  </div>
+
 </section>
 
 <!-- AWARDS -->
@@ -604,18 +676,20 @@
     <div style="background: var(--off-white); border: 1px solid var(--border); padding: 0.4rem 1rem; border-radius: 100px; font-family: 'JetBrains Mono', monospace; font-size: 0.78rem; color: var(--text-muted);">2009</div>
   </div>
   <div class="awards-grid">
-    <div class="award-card"><div class="award-year">2022</div><h4>PwC Kudos Award</h4><p>Outstanding Contribution</p></div>
-    <div class="award-card"><div class="award-year">2019 &amp; 2020</div><h4>Deloitte Applause Award</h4><p>Excellence in Delivery</p></div>
-    <div class="award-card"><div class="award-year">2018</div><h4>We Applaud Award</h4><p>Team Impact Recognition</p></div>
-    <div class="award-card"><div class="award-year">2017</div><h4>Dazzling Debut Award</h4><p>Outstanding Onboarding</p></div>
-    <div class="award-card"><div class="award-year">2014 &amp; 2016</div><h4>Accenture Apex Award</h4><p>High Performance</p></div>
-    <div class="award-card"><div class="award-year">2016</div><h4>Avanade Orange Award</h4><p>Innovation &amp; Excellence</p></div>
+    <div class="award-card"><div class="award-year">Nov 2024</div><h4>Constellation Award</h4><p>NTT DATA</p></div>
+    <div class="award-card"><div class="award-year">2013</div><h4>Dynamo Award</h4><p>Infosys Ltd</p></div>
+    <div class="award-card"><div class="award-year">2016</div><h4>Inspire Award</h4><p>Infosys Ltd</p></div>
   </div>
 </section>
 
 <footer>
   <p style="margin-bottom:0.5rem;">Srinivasa Pesala — GenAI &amp; Data Engineering Lead — Irving, TX</p>
-  <p><a href="mailto:psrinvas570000@gmail.com">psrinvas570000@gmail.com</a> &nbsp;|&nbsp; <a href="https://www.linkedin.com/in/sayantan-bhattacharya" target="_blank">LinkedIn</a> &nbsp;|&nbsp; 925-917-9999</p>
+  <p>
+    <a href="mailto:psrinvas570000@gmail.com">psrinvas570000@gmail.com</a> &nbsp;|&nbsp;
+    <a href="https://www.linkedin.com/in/sayantan-bhattacharya" target="_blank">LinkedIn</a> &nbsp;|&nbsp;
+    <a href="https://github.com/srinivasapesala" target="_blank">GitHub</a> &nbsp;|&nbsp;
+    925-917-9999
+  </p>
 </footer>
 
 </body>
