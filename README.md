@@ -2,7 +2,7 @@
 
 Personal portfolio website for Srinivasa Pesala, GenAI & Data Engineering Lead.
 
-**Live site:** https://srinivasapesala.github.io/srinivasa-pesala-portfolio/
+**Live site:** https://srinivasa.pesala.github.io/srinivasa-pesala-portfolio/
 
 ## About
 
